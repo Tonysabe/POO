@@ -1,0 +1,7 @@
+Cliente llama a aprendamos
+El recepcionisa pregunta si desea servicio o comprobar su certificado
+El cliente desea comprobar su certificado
+EL recepcionista le pide su identificador(consta de numeros y letras)
+El cliente brinda su identificador
+EL recepcionista lo busca en la base de datos
+El recepcionista comprueba el certificado en el sistema
