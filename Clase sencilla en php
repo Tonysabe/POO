@@ -1,0 +1,17 @@
+<?php
+	class Persona{
+		//Atributos
+		public $Nombre="Tony Galo";
+		//Metodos
+		
+
+		public function Hablar(){
+
+		}
+	}
+
+
+	$Persona1 = new Persona();
+	echo $Persona1->Nombre;
+	
+?>
