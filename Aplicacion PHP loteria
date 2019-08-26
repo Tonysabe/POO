@@ -1,0 +1,50 @@
+<?php
+	class Loteria{
+		//Atributos
+		public $Numero;
+		public $Intentos;
+		public $Resultado=false;
+		//Metodos
+		public function __construct($Numero,$Intentos){
+			$this->Numero=$Numero;
+			$this->Intentos=$Intentos;
+		}
+
+		public function Sortear(){
+			$Minimo=$this->Numero/2;
+			$Maximo=$this->Numero*2;
+			
+			for ($i=0; $i < $this->Intentos; $i++) {
+				$int=rand($Minimo,$Maximo); 
+				self::Intentos($int);
+			}
+		}
+
+		public function Intentos($int){
+			if ($int == $this->Numero){
+				echo "<b>" . $int . "==" . $this->Numero . "</b><br>";
+				$this->Resultado=true;
+			}
+			else{
+				echo $int . "!=" . $this->Numero . "<br>";
+			}
+		}
+
+		public function __destruct(){
+			if($this->Resultado){
+				echo "Felicidades has acertado en ". $this->Intentos . " Intentos";
+			}
+			else{
+				echo "Que lastima has perdido en ". $this->Intentos . " Intentos";
+			}
+
+		}
+	}
+
+	$Rifa=new Loteria(10,10);
+	$Rifa->Sortear();
+
+
+
+
+?>
